@@ -5,7 +5,7 @@ body {
     margin: 0;
 }
 
-ul {
+header ul {
     list-style: none;
     display: flex;
 }
@@ -13,37 +13,286 @@ ul {
 .logo {
     height: 32px;
     display: flex;
+    align-items: center;
+    margin: 16px 0px 16px 24px;
 }
 
-.mobile-nav {
-    display: none;
-}
 nav {
     display: flex;
+    margin: 8px 24px;
 }
 
 header {
     height: 64px;
-    /*display: flex;*/
-    /*align-items: center;*/
-}
-
-.header-desktop {
     display: flex;
     justify-content: space-between;
+    color: grey;
 }
 
-li img {
+header li img {
     display: none;
 }
 
+header li {
+    margin-right: 16px;
+}
+
+header strong {
+    color: black;
+}
+
+
+.cta-section {
+    display: flex;
+    align-items: center;
+    background-color: lightgrey;
+}
+
+.cta-section img.banner {
+    width: 60%;
+    padding: 32px 24px;
+}
+
+.cta-section>div {
+    display: block;
+    margin: auto;
+    padding-right: 24px;
+}
+
+.cta-section .cta-title {
+    font-size: 2em;
+}
+
+.cta-section .cta-subtext,
+.cta-title {
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.cta-section .cta-btn {
+    width: 100%;
+    border: none;
+    padding: 8px 0;
+    color: #fff;
+    background: #494949;
+}
+
+.cta-section .cta-btn:hover {
+    background: #9a9a9a;
+    cursor: pointer;
+}
+
+.information-section {
+    display: flex;
+    width: 100%;
+}
+
+.information-section .quote-box {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    padding: 32px 24px;
+}
+
+.information-section img {
+    width: 100%;
+}
+
+.quote {
+    margin: 32px 0;
+}
+
+.information-section .quote h2 {
+    margin-bottom: 24px;
+}
+
+.information-section .quote p:last-child {
+    margin-top: 32px;
+}
+
+.information-section .information-boxes {
+    width: 40%;
+    padding: 32px 0;
+    align-items: center;
+}
+
+.information-section .information-boxes .info-box {
+    display: flex;
+    padding: 16px;
+    align-items: center;
+    border: 1px solid #d8d8d8;
+    cursor: pointer;
+}
+
+.information-section .information-boxes .info-box:hover {
+    background: #d8d8d8;
+}
+
+.information-section .information-boxes .info-box picture,
+.exhibit-section .info-box img {
+    width: 35%;
+}
+
+.information-section .information-boxes .info-box .text-content {
+    width: 55%;
+    margin-left: 16px;
+    height: fit-content;
+}
+
+.information-section .information-boxes .text-content .description {
+    margin: 8px 0;
+}
+
+.courses-section {
+    background: #eaebec;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.courses-section h2 {
+    margin-top: 32px;
+}
+
+.courses-section .desktop-course-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 32px 72px;
+}
+
+.courses-section .desktop-course-boxes .course {
+    flex: 1 0 30%;
+    margin: 16px;
+    background: #fff;
+    cursor: pointer;
+}
+
+.courses-section .desktop-course-boxes .course img {
+    width: 100%;
+}
+
+.courses-section .course .text-content {
+    margin: 0 16px;
+}
+
+.courses-section .course .text-content .title {
+    margin-top: 16px;
+}
+
+.courses-section .course .text-content p:not(.description) {
+    margin: 8px 0;
+}
+
+.courses-section .course .text-content .description {
+    margin-bottom: 16px;
+}
+
+.courses-section .mobile-course-boxes {
+    display: none;
+    margin: 0 16px;
+    flex-direction: column;
+    width: calc(100% - 32px);
+}
+
+.courses-section .mobile-course-boxes .course {
+    padding: 16px;
+    font-size: 1.2em;
+    font-weight: bold;
+    background: #d8d8d8;
+    margin: 4px 0;
+}
+
+.courses-section .mobile-course-boxes .course:last-child {
+    margin-bottom: 32px;
+}
+
+.exhibit-section h2 {
+    text-align: center;
+    margin: 32px 0;
+}
+
+.exhibit-section .quote-box h4 {
+    margin-bottom: 8px;
+}
+
+.exhibit-section .mobile-video {
+    display: none;
+    margin-bottom: 24px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 16px 24px;
+}
+
+footer ul {
+    display: flex;
+}
+
+footer ul li {
+    margin: 8px;
+}
 
 @media only screen and (max-width: 750px) {
-    .logo, li span {
+    .logo, header li span {
         display: none;
     }
-    li img {
+    header li img {
         display: block;
+    }
+    header ul {
+        display: flex;
+        justify-content: space-between;
+    }
+    nav, header ul {
+        width: 100%;
+    }
+
+    .information-section .quote-box,
+    .courses-section .desktop-course-boxes,
+    .exhibit-section .information-section,
+    footer ul {
+        display: none;
+    }
+
+    .information-section .information-boxes .info-box,
+    .courses-section .mobile-course-boxes,
+    .exhibit-section .mobile-video {
+        display: flex;
+    }
+    .cta-section {
+        flex-direction: column;
+        padding: 0;
+    }
+    .cta-section img.banner,
+    .information-section .information-boxes {
+        width: 100%;
+        padding: 0;
+    }
+    .cta-section>div {
+        margin: 0 24px;
+    }
+    .cta-section .cta-title {
+        margin: 32px 0;
+    }
+    .cta-section .cta-btn {
+        margin: 24px 0 32px 0;
+    }
+    .information-section .information-boxes .info-box {
+        flex-direction: column;
+        align-items: flex-start;
+        border: none;
+    }
+    .information-section .information-boxes .info-box picture {
+        width: 100%;
+    }
+    .courses-section {
+        background: white;
+    }
+    .courses-section h2 {
+        margin-bottom: 16px;
     }
 }
 

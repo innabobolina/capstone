@@ -1,3 +1,50 @@
+
 body {
-    background: cyan;
+    font-family: sans-serif;
+    font-size: 16px;
+    margin: 0;
 }
+
+ul {
+    list-style: none;
+    display: flex;
+}
+
+.logo {
+    height: 32px;
+    display: flex;
+}
+
+.mobile-nav {
+    display: none;
+}
+nav {
+    display: flex;
+}
+
+header {
+    height: 64px;
+    /*display: flex;*/
+    /*align-items: center;*/
+}
+
+.header-desktop {
+    display: flex;
+    justify-content: space-between;
+}
+
+li img {
+    display: none;
+}
+
+
+@media only screen and (max-width: 750px) {
+    .logo, li span {
+        display: none;
+    }
+    li img {
+        display: block;
+    }
+}
+
+
